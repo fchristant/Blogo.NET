@@ -1,0 +1,476 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4335301C-C7A2-4A25-AACE-C27D881D4EE7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Blogo.NET</RootNamespace>
+    <AssemblyName>Blogo.NET</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code\Business\Author.cs" />
+    <Compile Include="Code\Business\Comment.cs" />
+    <Compile Include="Code\Business\BlogEntry.cs" />
+    <Compile Include="Code\Business\File.cs" />
+    <Compile Include="Code\Business\Log.cs" />
+    <Compile Include="Code\Business\Month.cs" />
+    <Compile Include="Code\Business\Tag.cs" />
+    <Compile Include="Code\Data\Access\Author.db.cs" />
+    <Compile Include="Code\Data\Access\Comment.db.cs" />
+    <Compile Include="Code\Data\Access\BlogEntry.db.cs" />
+    <Compile Include="Code\Data\Access\File.db.cs" />
+    <Compile Include="Code\Data\Access\Log.db.cs" />
+    <Compile Include="Code\Data\Mapping\BlogoMap.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BlogoMap.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Code\Utils\BlogoMembershipProvider.cs" />
+    <Compile Include="Code\Utils\BlogoSettings.cs" />
+    <Compile Include="Code\Utils\Hash.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controls\BlogList.ascx.cs">
+      <DependentUpon>BlogList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Controls\BlogList.ascx.designer.cs">
+      <DependentUpon>BlogList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\Admin\AdminImageList.aspx.cs">
+      <DependentUpon>AdminImageList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Pages\Admin\AdminImageList.aspx.designer.cs">
+      <DependentUpon>AdminImageList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Masters\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Masters\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="View\Masters\Page.Master.cs">
+      <DependentUpon>Page.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Masters\Page.Master.designer.cs">
+      <DependentUpon>Page.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Code\Data\Access\Tag.db.cs" />
+    <Compile Include="Code\Business\Types.cs" />
+    <Compile Include="View\Masters\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Masters\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="View\Masters\_PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Pages\Admin\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Pages\Admin\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\Admin\AdminAuthorEditNew.aspx.cs">
+      <DependentUpon>AdminAuthorEditNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Pages\Admin\AdminAuthorEditNew.aspx.designer.cs">
+      <DependentUpon>AdminAuthorEditNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\Admin\AdminBlogEditNew.aspx.cs">
+      <DependentUpon>AdminBlogEditNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Pages\Admin\AdminBlogEditNew.aspx.designer.cs">
+      <DependentUpon>AdminBlogEditNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\Admin\AdminComments.aspx.cs">
+      <DependentUpon>AdminComments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Pages\Admin\AdminComments.aspx.designer.cs">
+      <DependentUpon>AdminComments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\Admin\AdminAuthors.aspx.cs">
+      <DependentUpon>AdminAuthors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Pages\Admin\AdminAuthors.aspx.designer.cs">
+      <DependentUpon>AdminAuthors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\Admin\AdminFileNew.aspx.cs">
+      <DependentUpon>AdminFileNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Pages\Admin\AdminFileNew.aspx.designer.cs">
+      <DependentUpon>AdminFileNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\Admin\AdminFiles.aspx.cs">
+      <DependentUpon>AdminFiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Pages\Admin\AdminFiles.aspx.designer.cs">
+      <DependentUpon>AdminFiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\Admin\AdminLog.aspx.cs">
+      <DependentUpon>AdminLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Pages\Admin\AdminLog.aspx.designer.cs">
+      <DependentUpon>AdminLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\Admin\AdminLogEntry.aspx.cs">
+      <DependentUpon>AdminLogEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Pages\Admin\AdminLogEntry.aspx.designer.cs">
+      <DependentUpon>AdminLogEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\Admin\AdminSetup.aspx.cs">
+      <DependentUpon>AdminSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Pages\Admin\AdminSetup.aspx.designer.cs">
+      <DependentUpon>AdminSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\Admin\AdminTagEditNew.aspx.cs">
+      <DependentUpon>AdminTagEditNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Pages\Admin\AdminTagEditNew.aspx.designer.cs">
+      <DependentUpon>AdminTagEditNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\Admin\AdminTags.aspx.cs">
+      <DependentUpon>AdminTags.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Pages\Admin\AdminTags.aspx.designer.cs">
+      <DependentUpon>AdminTags.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\File.aspx.cs">
+      <DependentUpon>File.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Pages\File.aspx.designer.cs">
+      <DependentUpon>File.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Pages\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\BlogArticles.aspx.cs">
+      <DependentUpon>BlogArticles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Pages\BlogArticles.aspx.designer.cs">
+      <DependentUpon>BlogArticles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\BlogByMonth.aspx.cs">
+      <DependentUpon>BlogByMonth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Pages\BlogByMonth.aspx.designer.cs">
+      <DependentUpon>BlogByMonth.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\BlogByTag.aspx.cs">
+      <DependentUpon>BlogByTag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Pages\BlogByTag.aspx.designer.cs">
+      <DependentUpon>BlogByTag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\BlogEntry.aspx.cs">
+      <DependentUpon>BlogEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Pages\BlogEntry.aspx.designer.cs">
+      <DependentUpon>BlogEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\Admin\AdminCommentEdit.aspx.cs">
+      <DependentUpon>AdminCommentEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Pages\Admin\AdminCommentEdit.aspx.designer.cs">
+      <DependentUpon>AdminCommentEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Pages\Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Pages\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Pages\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\TagCloud.aspx.cs">
+      <DependentUpon>TagCloud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Pages\TagCloud.aspx.designer.cs">
+      <DependentUpon>TagCloud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\RSS\RSSArticles.aspx.cs">
+      <DependentUpon>RSSArticles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\RSS\RSSArticles.aspx.designer.cs">
+      <DependentUpon>RSSArticles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\RSS\RSSBlogs.aspx.cs">
+      <DependentUpon>RSSBlogs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\RSS\RSSBlogs.aspx.designer.cs">
+      <DependentUpon>RSSBlogs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\RSS\RSSComments.aspx.cs">
+      <DependentUpon>RSSComments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\RSS\RSSComments.aspx.designer.cs">
+      <DependentUpon>RSSComments.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Code\Data\Mapping\BlogoMap.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>BlogoMap.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Code\diagram.cd" />
+    <None Include="Code\Data\Mapping\BlogoMap.dbml.layout">
+      <DependentUpon>BlogoMap.dbml</DependentUpon>
+    </None>
+    <Content Include="Global.asax" />
+    <Content Include="View\Controls\BlogList.ascx" />
+    <Content Include="View\Pages\Admin\AdminImageList.aspx" />
+    <Content Include="View\Controls\tiny_mce\langs\en.js" />
+    <Content Include="View\Controls\tiny_mce\license.txt" />
+    <Content Include="View\Controls\tiny_mce\plugins\fullscreen\editor_plugin.js" />
+    <Content Include="View\Controls\tiny_mce\plugins\fullscreen\editor_plugin_src.js" />
+    <Content Include="View\Controls\tiny_mce\plugins\fullscreen\fullscreen.htm" />
+    <Content Include="View\Controls\tiny_mce\plugins\table\cell.htm" />
+    <Content Include="View\Controls\tiny_mce\plugins\table\css\cell.css" />
+    <Content Include="View\Controls\tiny_mce\plugins\table\css\row.css" />
+    <Content Include="View\Controls\tiny_mce\plugins\table\css\table.css" />
+    <Content Include="View\Controls\tiny_mce\plugins\table\editor_plugin.js" />
+    <Content Include="View\Controls\tiny_mce\plugins\table\editor_plugin_src.js" />
+    <Content Include="View\Controls\tiny_mce\plugins\table\js\cell.js" />
+    <Content Include="View\Controls\tiny_mce\plugins\table\js\merge_cells.js" />
+    <Content Include="View\Controls\tiny_mce\plugins\table\js\row.js" />
+    <Content Include="View\Controls\tiny_mce\plugins\table\js\table.js" />
+    <Content Include="View\Controls\tiny_mce\plugins\table\langs\en_dlg.js" />
+    <Content Include="View\Controls\tiny_mce\plugins\table\merge_cells.htm" />
+    <Content Include="View\Controls\tiny_mce\plugins\table\row.htm" />
+    <Content Include="View\Controls\tiny_mce\plugins\table\table.htm" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\about.htm" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\anchor.htm" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\charmap.htm" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\color_picker.htm" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\editor_template.js" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\editor_template_src.js" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\image.htm" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\img\colorpicker.jpg" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\img\icons.gif" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\js\about.js" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\js\anchor.js" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\js\charmap.js" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\js\color_picker.js" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\js\image.js" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\js\link.js" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\js\source_editor.js" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\langs\en.js" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\langs\en_dlg.js" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\link.htm" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\skins\default\content.css" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\skins\default\dialog.css" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\skins\default\img\buttons.png" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\skins\default\img\items.gif" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\skins\default\img\menu_arrow.gif" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\skins\default\img\menu_check.gif" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\skins\default\img\progress.gif" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\skins\default\img\tabs.gif" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\skins\default\ui.css" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\skins\o2k7\content.css" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\skins\o2k7\dialog.css" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\skins\o2k7\img\button_bg.png" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\skins\o2k7\img\button_bg_black.png" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\skins\o2k7\img\button_bg_silver.png" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\skins\o2k7\ui.css" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\skins\o2k7\ui_black.css" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\skins\o2k7\ui_silver.css" />
+    <Content Include="View\Controls\tiny_mce\themes\advanced\source_editor.htm" />
+    <Content Include="View\Controls\tiny_mce\themes\simple\editor_template.js" />
+    <Content Include="View\Controls\tiny_mce\themes\simple\editor_template_src.js" />
+    <Content Include="View\Controls\tiny_mce\themes\simple\img\icons.gif" />
+    <Content Include="View\Controls\tiny_mce\themes\simple\langs\en.js" />
+    <Content Include="View\Controls\tiny_mce\themes\simple\skins\default\content.css" />
+    <Content Include="View\Controls\tiny_mce\themes\simple\skins\default\ui.css" />
+    <Content Include="View\Controls\tiny_mce\themes\simple\skins\o2k7\content.css" />
+    <Content Include="View\Controls\tiny_mce\themes\simple\skins\o2k7\img\button_bg.png" />
+    <Content Include="View\Controls\tiny_mce\themes\simple\skins\o2k7\ui.css" />
+    <Content Include="View\Controls\tiny_mce\tiny_mce.js" />
+    <Content Include="View\Controls\tiny_mce\tiny_mce_popup.js" />
+    <Content Include="View\Controls\tiny_mce\tiny_mce_src.js" />
+    <Content Include="View\Controls\tiny_mce\utils\editable_selects.js" />
+    <Content Include="View\Controls\tiny_mce\utils\form_utils.js" />
+    <Content Include="View\Controls\tiny_mce\utils\mclayer.js" />
+    <Content Include="View\Controls\tiny_mce\utils\mctabs.js" />
+    <Content Include="View\Controls\tiny_mce\utils\validate.js" />
+    <Content Include="View\Masters\Admin.Master" />
+    <Content Include="View\Pages\Admin\Admin.aspx" />
+    <Content Include="View\Pages\Admin\AdminAuthorEditNew.aspx" />
+    <Content Include="View\Pages\Admin\AdminBlogEditNew.aspx" />
+    <Content Include="View\Pages\Admin\AdminComments.aspx" />
+    <Content Include="View\Pages\Admin\AdminAuthors.aspx" />
+    <Content Include="View\Pages\Admin\AdminCommentEdit.aspx" />
+    <Content Include="View\Pages\Admin\AdminFileNew.aspx" />
+    <Content Include="View\Pages\Admin\AdminFiles.aspx" />
+    <Content Include="View\Pages\Admin\AdminLog.aspx" />
+    <Content Include="View\Pages\Admin\AdminLogEntry.aspx" />
+    <Content Include="View\Pages\Admin\AdminSetup.aspx" />
+    <Content Include="View\Pages\Admin\AdminTagEditNew.aspx" />
+    <Content Include="View\Pages\Admin\AdminTags.aspx" />
+    <Content Include="View\Pages\File.aspx" />
+    <Content Include="View\Pages\Logout.aspx" />
+    <Content Include="View\Pages\Error.aspx" />
+    <Content Include="View\Pages\Login.aspx" />
+    <Content Include="View\Pages\TagCloud.aspx" />
+    <Content Include="View\RSS\RSSArticles.aspx" />
+    <Content Include="View\RSS\RSSBlogs.aspx" />
+    <Content Include="View\RSS\RSSComments.aspx" />
+    <Content Include="Web.sitemap" />
+    <Content Include="View\Images\a37.gif" />
+    <Content Include="View\Masters\Page.Master" />
+    <Content Include="View\CSS\default.css" />
+    <Content Include="View\Images\a1.gif" />
+    <Content Include="View\Images\a10.jpg" />
+    <Content Include="View\Images\a16.gif" />
+    <Content Include="View\Images\a18.gif" />
+    <Content Include="View\Images\a22.gif" />
+    <Content Include="View\Images\a26.gif" />
+    <Content Include="View\Images\a33.gif" />
+    <Content Include="View\Images\a36.gif" />
+    <Content Include="View\Images\a38.gif" />
+    <Content Include="View\Images\a41.gif" />
+    <Content Include="View\Images\a47.gif" />
+    <Content Include="View\Images\a50.gif" />
+    <Content Include="View\Images\a8.gif" />
+    <Content Include="View\Images\abg.gif" />
+    <Content Include="View\Images\pic1.jpg" />
+    <Content Include="View\Images\pic2.jpg" />
+    <Content Include="View\Images\spacer.gif" />
+    <Content Include="View\Images\upbg.gif" />
+    <Content Include="View\Masters\Site.Master" />
+    <Content Include="View\Pages\BlogArticles.aspx" />
+    <Content Include="View\Pages\BlogByMonth.aspx" />
+    <Content Include="View\Pages\BlogByTag.aspx" />
+    <Content Include="View\Pages\BlogEntry.aspx" />
+    <Content Include="View\Pages\Home.aspx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57624</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

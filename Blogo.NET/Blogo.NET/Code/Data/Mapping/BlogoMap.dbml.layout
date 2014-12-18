@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.375, 8.5" name="BlogoMap">
+  <DataContextMoniker Name="/BlogoMapDataContext" />
+  <nestedChildShapes>
+    <classShape Id="da7b3cf1-c8dc-4959-8b1f-c2826bae94c6" absoluteBounds="0.75, 2.625, 2, 1.5785953776041661">
+      <DataClassMoniker Name="/BlogoMapDataContext/author" />
+      <nestedChildShapes>
+        <elementListCompartment Id="192270c8-ae22-42e1-a385-d8c40dd8e7c6" absoluteBounds="0.76500000000000012, 3.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bcbb9bf4-3144-4a85-916e-551aa63b8eb3" absoluteBounds="6.25, 1.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/BlogoMapDataContext/blog_tag" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c664e60e-a264-4cfd-b653-2b782d276226" absoluteBounds="6.265, 2.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c4c6e7e3-786f-430c-99a6-9deb6c3a8bbb" absoluteBounds="3.5, 1.75, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/BlogoMapDataContext/blogentry" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1ec24755-1aad-4328-a302-6de944c9a15f" absoluteBounds="3.5149999999999997, 2.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 2.44314697265625); (6.25 : 2.44314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/BlogoMapDataContext/blogentry/blogentry_blog_tag" />
+      <nodes>
+        <classShapeMoniker Id="c4c6e7e3-786f-430c-99a6-9deb6c3a8bbb" />
+        <classShapeMoniker Id="bcbb9bf4-3144-4a85-916e-551aa63b8eb3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.41429768880208); (3.5 : 3.41429768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/BlogoMapDataContext/author/author_blogentry" />
+      <nodes>
+        <classShapeMoniker Id="da7b3cf1-c8dc-4959-8b1f-c2826bae94c6" />
+        <classShapeMoniker Id="c4c6e7e3-786f-430c-99a6-9deb6c3a8bbb" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b1c12e18-31dc-4147-9f71-c50454e56dcb" absoluteBounds="3.5, 5.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/BlogoMapDataContext/comment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a8d62563-eadb-4510-854d-077e4577891a" absoluteBounds="3.5150000000000006, 6.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.5 : 4.67470540364583); (4.5 : 5.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/BlogoMapDataContext/blogentry/blogentry_comment" />
+      <nodes>
+        <classShapeMoniker Id="c4c6e7e3-786f-430c-99a6-9deb6c3a8bbb" />
+        <classShapeMoniker Id="b1c12e18-31dc-4147-9f71-c50454e56dcb" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2025a594-0341-436a-8e78-9fe4b1585181" absoluteBounds="9.125, 1.875, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/BlogoMapDataContext/tag" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5c36a4a1-447d-4608-82f4-652b5b435b57" absoluteBounds="9.14, 2.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.125 : 2.47199625651042); (8.25 : 2.47199625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/BlogoMapDataContext/tag/tag_blog_tag" />
+      <nodes>
+        <classShapeMoniker Id="2025a594-0341-436a-8e78-9fe4b1585181" />
+        <classShapeMoniker Id="bcbb9bf4-3144-4a85-916e-551aa63b8eb3" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="73eea03d-3152-4045-9617-7b592933c15d" absoluteBounds="6.25, 3.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/BlogoMapDataContext/log" />
+      <nestedChildShapes>
+        <elementListCompartment Id="02c85b88-ca43-4cbb-afc1-0090ef3ec3c5" absoluteBounds="6.265, 4.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="afb63049-393e-4175-b9c4-d541178ec79f" absoluteBounds="9.125, 3.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/BlogoMapDataContext/file" />
+      <nestedChildShapes>
+        <elementListCompartment Id="17fe9cdd-5cb8-47e3-a0b3-99e00d18f654" absoluteBounds="9.14, 4.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

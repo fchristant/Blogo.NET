@@ -1,0 +1,121 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/View/Masters/Site.Master" AutoEventWireup="true" CodeBehind="Page.master.cs" Inherits="Blogo.NET.View.Masters.Page" EnableViewState="False" %>
+<asp:Content ID="ContentPrimary" ContentPlaceHolderID="ContentPlaceHolderPrimary" runat="server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderPage" runat="server" 
+        EnableViewState="False">
+        <form id="form1" runat="server">
+        </form>
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="ContentSecondary" ContentPlaceHolderID="ContentPlaceHolderSecondary" runat="server">
+    
+<div class="content">
+    <asp:Label ID="LabelBlogDescription" runat="server" Text=""></asp:Label>
+</div>
+    <asp:ListView ID="ListTags" runat="server" DataSourceID="ObjectDataSourceTags" 
+        EnableViewState="False" ItemPlaceholderID="itemContainer">
+        <LayoutTemplate>
+        <h3>Tags</h3>
+        <div class="content">
+        <ul class="linklist">
+        <li><a href="TagCloud.aspx">&gt; Tag cloud &lt;</a></li>
+        <asp:PlaceHolder ID="itemContainer" runat="server" />
+        </ul>
+        </div>
+        </LayoutTemplate>
+        <ItemTemplate>
+        <li><a href="BlogByTag.aspx?tag=<%# Eval("id") %>"><%#Eval("tagname") %></a></li>
+        </ItemTemplate>
+        <EmptyDataTemplate>
+        <h3>Tags</h3>
+        <div class="content">
+        <ul class="linklist">
+        <li>No tags yet.</li>
+        </ul>
+        </div>
+        </EmptyDataTemplate>
+    </asp:ListView>
+    <asp:ObjectDataSource ID="ObjectDataSourceTags" runat="server" 
+        OldValuesParameterFormatString="original_{0}" SelectMethod="GetListUsedTags" 
+        TypeName="Blogo.NET.Business.TagManager" 
+        DataObjectTypeName="Blogo.NET.Business.Tag" DeleteMethod="Delete" 
+        UpdateMethod="Save" EnableCaching="True" EnableViewState="False" 
+        MaximumRowsParameterName="PageSize" SelectCountMethod="CountTag" 
+        StartRowIndexParameterName="StartRow"></asp:ObjectDataSource>
+   
+    <asp:ListView ID="ListArticles" runat="server" 
+        DataSourceID="ObjectDataSourceArticles" ItemPlaceholderID="itemContainer" EnableViewState="False">
+        <LayoutTemplate>
+        <h3>Articles</h3>
+        <div class="content">
+        <ul class="linklist">
+        <li><a href="BlogArticles.aspx">&gt; All articles &lt;</a></li>
+        <asp:PlaceHolder ID="itemContainer" runat="server" />
+        </ul>
+        </div>
+        </LayoutTemplate>
+        <ItemTemplate>
+        <li><a href="BlogEntry.aspx?page=<%# Eval("id") %>"><%#Eval("title") %></a></li>
+        </ItemTemplate>
+        <EmptyDataTemplate>
+        <h3>Articles</h3>
+        <div class="content">
+        <ul class="linklist">
+        <li>No articles yet.</li>
+        </ul>
+        </div>
+        </EmptyDataTemplate>
+    </asp:ListView>
+    <asp:ObjectDataSource ID="ObjectDataSourceArticles" runat="server" 
+        OldValuesParameterFormatString="original_{0}" SelectMethod="GetListType" 
+        TypeName="Blogo.NET.Business.BlogEntryManager" 
+        MaximumRowsParameterName="PageSize" SelectCountMethod="CountType" 
+        StartRowIndexParameterName="StartRow" EnableViewState="False">
+        <SelectParameters>
+            <asp:Parameter DefaultValue="article" Name="type" Type="Object" />
+            <asp:Parameter DefaultValue="" Name="StartRow" Type="Int32" />
+            <asp:Parameter DefaultValue="20" Name="PageSize" Type="Int32" />
+        </SelectParameters>
+    </asp:ObjectDataSource>
+    <asp:ListView ID="ListViewArchive" runat="server" 
+        DataSourceID="ObjectDataSourceArchive" EnableViewState="False" 
+        ItemPlaceholderID="itemContainer">
+        <LayoutTemplate>
+        <h3>Archive</h3>
+        <div class="content">
+        <ul class="linklist">
+        <asp:PlaceHolder ID="itemContainer" runat="server" />
+        </ul>
+        </div>
+        </LayoutTemplate>
+        <ItemTemplate>
+        <li><a href="BlogByMonth.aspx?year=<%# Eval("year") %>&month=<%# Eval("month") %>"><%# Eval("year") %>-<%# Eval("month") %></a></li>
+        </ItemTemplate>
+        <EmptyDataTemplate>
+        <h3>Archive</h3>
+        <div class="content">
+        <ul class="linklist">
+        <li>No blog entries yet.</li>
+        </ul>
+        </div>
+        </EmptyDataTemplate>
+    </asp:ListView>
+    <asp:ObjectDataSource ID="ObjectDataSourceArchive" runat="server" 
+        EnableCaching="True" EnableViewState="False" 
+        MaximumRowsParameterName="PageSize" 
+        OldValuesParameterFormatString="original_{0}" SelectCountMethod="CountUsedMonths" 
+        SelectMethod="GetListUsedMonths" StartRowIndexParameterName="StartRow" 
+        TypeName="Blogo.NET.Business.BlogEntryManager">
+        <SelectParameters>
+            <asp:Parameter Name="StartRow" Type="Int32" />
+            <asp:Parameter DefaultValue="120" Name="PageSize" Type="Int32" />
+        </SelectParameters>
+    </asp:ObjectDataSource>
+    <h3>Feeds</h3>
+    <div class="content">
+    <ul class="linklist">
+    <li><a id="RSSBlogs" href="~/View/RSS/RSSBlogs.aspx" runat="server">Blog entries</a></li>
+    <li><a id="RSSArticles" href="~/View/RSS/RSSArticles.aspx" runat="server">Articles</a></li>
+    <li><a id="RSSComments" href="~/View/RSS/RSSComments.aspx" runat="server">Comments</a></li>
+    </ul>
+    </div>
+   </asp:Content>

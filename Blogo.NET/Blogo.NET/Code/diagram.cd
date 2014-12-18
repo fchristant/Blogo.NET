@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
+  <Class Name="Blogo.NET.Business.AuthorManager">
+    <Position X="2.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAEAAAAAAAAQAAAEAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Code\Business\Author.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blogo.NET.Business.Author">
+    <Position X="2.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAABAAAEAAAAAAAAAAAAAAgAAAgA=</HashCode>
+      <FileName>Code\Business\Author.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blogo.NET.Business.BlogEntryManager">
+    <Position X="4.5" Y="1" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BAAAAJAAAAAAAEBABACAgAQAAAEAAAAAQAAAAABABgI=</HashCode>
+      <FileName>Code\Business\BlogEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blogo.NET.Business.BlogEntry">
+    <Position X="4.5" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AgAgAAAAUAAEAAAAIABAAIIAAQCBAAAAAABAIABAAgA=</HashCode>
+      <FileName>Code\Business\BlogEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blogo.NET.Business.CommentManager">
+    <Position X="6.5" Y="1" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAEAAAAAAAAQAAAEAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Code\Business\Comment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blogo.NET.Business.Comment">
+    <Position X="6.5" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAABAAIBAIQAAAAAAAAAAAABAAgA=</HashCode>
+      <FileName>Code\Business\Comment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blogo.NET.Business.FileManager">
+    <Position X="8.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAEAAAAAAAAQAAAEAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Code\Business\File.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blogo.NET.Business.File">
+    <Position X="8.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABCAAAAAAAAAABAAAAAAAAAAAAAAAAAAACAAgA=</HashCode>
+      <FileName>Code\Business\File.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blogo.NET.Business.LogManager">
+    <Position X="10.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAEAgAAAAAAQAAAEAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Code\Business\Log.cs</FileName>
+      <NewMemberFileName>Code\Business\Tag.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blogo.NET.Business.Log">
+    <Position X="10.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABABAAAAAAAAAAAAAAAAQAAAgA=</HashCode>
+      <FileName>Code\Business\Log.cs</FileName>
+      <NewMemberFileName>Code\Business\Tag.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blogo.NET.Business.Month">
+    <Position X="13.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Code\Business\Month.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blogo.NET.Business.TagManager">
+    <Position X="12" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAEAAAAAAAQQAAAEAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Code\Business\Tag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blogo.NET.Business.Tag">
+    <Position X="12" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAgAAAAAAAAAAgA=</HashCode>
+      <FileName>Code\Business\Tag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blogo.NET.Data.Access.AuthorDB">
+    <Position X="2.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAQAEAgAAAAAAQAAAEAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Code\Data\Access\Author.db.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blogo.NET.Data.Access.BlogEntryDB">
+    <Position X="4.5" Y="9.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BAAAAJAAAAAQAEBgBACAgAQAAAEAAAAAQAAAAABABgI=</HashCode>
+      <FileName>Code\Data\Access\BlogEntry.db.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blogo.NET.Data.Access.CommentDB">
+    <Position X="6.5" Y="6" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAQAEAgAAAAAAQAAAEAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Code\Data\Access\Comment.db.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blogo.NET.Data.Access.FileDB">
+    <Position X="8.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAQAEAgAAAAAAQAAAEAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Code\Data\Access\File.db.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blogo.NET.Data.Access.LogDB">
+    <Position X="10.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAQAEAgAAAAAAQAAAEAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Code\Data\Access\Log.db.cs</FileName>
+      <NewMemberFileName>Code\Data\Access\Tag.db.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blogo.NET.Data.Access.TagDB">
+    <Position X="12" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAQAEAgAAAAAQQAAAEAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Code\Data\Access\Tag.db.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blogo.NET.Utils.BlogoMembershipProvider">
+    <Position X="16.25" Y="1" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AQQAAAAAAQAEgAiMEYAEAAAQAQIAAAICHAEAAAkAAAQ=</HashCode>
+      <FileName>Code\Utils\BlogoMembershipProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blogo.NET.Utils.BlogoSettings">
+    <Position X="16.25" Y="7.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAIAAAAAAAAABAAAAAAAAACAAAAABAACAAAAAAgA=</HashCode>
+      <FileName>Code\Utils\BlogoSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blogo.NET.Utils.Hash">
+    <Position X="16.25" Y="9.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Code\Utils\Hash.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Blogo.NET.Types">
+    <Position X="13.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Code\Business\Types.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

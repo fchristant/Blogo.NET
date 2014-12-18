@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Blogo.NET.View.Masters.Admin" MasterPageFile="~/View/Masters/Site.Master" %>
+<asp:Content ID="ContentPrimary" ContentPlaceHolderID="ContentPlaceHolderPrimary" runat="server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderPage" runat="server" 
+        EnableViewState="False">
+        <form id="form1" runat="server">
+        </form>
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="ContentSecondary" ContentPlaceHolderID="ContentPlaceHolderSecondary" runat="server">
+    <h3>Admin panel</h3>
+<div class="content">
+    <ul class="linklist">
+    <li><a id="manageblogs" href="~/View/Pages/Admin/Admin.aspx" runat="server">Manage 
+        blogs..</a></li>
+    <li><a id="managecomments" href="~/View/Pages/Admin/AdminComments.aspx" runat="server">
+        Manage comments..</a></li>
+    <li><a id="managetags" href="~/View/Pages/Admin/AdminTags.aspx" runat="server">
+        Manage tags..</a></li>
+    <li><a id="manageusers" href="~/View/Pages/Admin/AdminAuthors.aspx" runat="server">
+        Manage users..</a></li>
+    <li><a id="managefiles" href="~/View/Pages/Admin/AdminFiles.aspx" runat="server">Manage files..</a></li>
+    <li><a id="managelog" href="~/View/Pages/Admin/AdminLog.aspx" runat="server">Manage 
+        log..</a></li>
+    <li><a id="managesetup" href="~/View/Pages/Admin/AdminSetup.aspx" runat="server">
+        Setup..</a></li>
+    </ul>
+    
+    <br />
+    
+    <h3></h3>
+     <asp:LoginView ID="LoginViewBlogo" runat="server">
+    <LoggedInTemplate>
+        Logged in as <asp:LoginName ID="LoginName" runat="server" />
+        <br />
+        (<a id="LinkLogout" href="~/View/Pages/Logout.aspx" runat="server">Logout</a>)
+    </LoggedInTemplate>
+    <AnonymousTemplate>
+        You are not logged in
+        <br />
+        (<a id="LinkLogin" href="~/View/Pages/Login.aspx" runat="server">Login</a>)
+    </AnonymousTemplate>
+    </asp:LoginView>
+</div>
+</asp:Content>
+
+

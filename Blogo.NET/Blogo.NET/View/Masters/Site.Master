@@ -1,0 +1,85 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Blogo.NET.Site" EnableViewState="False" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+
+	terrafirma1.0 by nodethirtythree design
+	http://www.nodethirtythree.com
+
+-->
+<html>
+<head runat="server">
+<title>Blogo.NET</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="../CSS/default.css" />
+</head>
+<body>
+<div id="outer">
+
+	<div id="upbg"></div>
+
+	<div id="inner">
+        
+        <div id="header">
+			<h1>Blogo.NET</h1>
+		</div>
+			
+		<div id="splash"></div>
+	
+		<div id="menu">
+		
+           <asp:ListView ID="ListViewHeaderMenu" runat="server" 
+                DataSourceID="SiteMapDataSourceHeader" ItemPlaceholderID="itemContainer" EnableViewState="False">
+                <LayoutTemplate>
+                    <ul>
+                     <asp:PlaceHolder ID="itemContainer" runat="server" />
+                    </ul>
+                </LayoutTemplate>
+
+                <ItemTemplate>
+                    <li><a href="<%# Eval("Url") %>"><%# Eval("Title") %></a></li>
+                </ItemTemplate>
+            </asp:ListView>
+            <asp:SiteMapDataSource ID="SiteMapDataSourceHeader" runat="server" ShowStartingNode="False" StartingNodeOffset="0" EnableViewState="False" />
+
+		<div id="date"><a href="~/View/Pages/Admin/Admin.aspx" runat="server">Admin</a></div>
+		
+		</div>
+	
+
+		<div id="primarycontent">
+		
+			<!-- primary content start -->
+		
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderPrimary" runat="server" EnableViewState="False">
+            </asp:ContentPlaceHolder>
+
+			<!-- primary content end -->
+	
+		</div>
+		
+		<div id="secondarycontent">
+
+			<!-- secondary content start -->
+		
+			<asp:ContentPlaceHolder ID="ContentPlaceHolderSecondary" runat="server" EnableViewState="False">
+            </asp:ContentPlaceHolder>
+
+			<!-- secondary content end -->
+
+		</div>
+	
+		<div id="footer">
+		
+			&copy; Blogo.NET by <a href="http://www.s3maphor3.org">s3maphor3.org</a>. All rights reserved. Design by <a href="http://www.nodethirtythree.com/">NodeThirtyThree</a>.<br />
+		
+		</div>
+
+	</div>
+
+</div>
+
+</body>
+</html>
